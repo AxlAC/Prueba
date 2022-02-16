@@ -18,6 +18,8 @@
     <ClCompile Include="Buscaminas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Image.cpp">
+</ClCompile>
     <ClCompile Include="Table.cpp">
     <ClCompile>
     <ClCompile Include="Resources.cpp">
@@ -25,6 +27,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Image.h">
   </ClCompile>
     <ClInclude Include="Table.h">
   <ClCompile>

@@ -140,6 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Buscaminas.cpp" />
+</ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Image.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Image.h" />
      </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Table.cpp" />
