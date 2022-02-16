@@ -18,11 +18,16 @@
     <ClCompile Include="Buscaminas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Table.cpp">
+    <ClCompile>
     <ClCompile Include="Resources.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+  </ClCompile>
+    <ClInclude Include="Table.h">
+  <ClCompile>
     <ClInclude Include="Resources.h">
       <Filter>Header Files</Filter>
     </ClInclude>
