@@ -18,19 +18,33 @@
     <ClCompile Include="Buscaminas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+
     <ClCompile Include="Cell.cpp">
 </ClCompile>
+
+    <ClCompile Include="Image.cpp">
+</ClCompile>
+    <ClCompile Include="Table.cpp">
+    <ClCompile>
+
     <ClCompile Include="Resources.cpp">
 </ClCompile>
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+
     <ClInclude Include="Cell.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
  <ItemGroup>
+
+    <ClInclude Include="Image.h">
+  </ClCompile>
+    <ClInclude Include="Table.h">
+  <ClCompile>
+
     <ClInclude Include="Resources.h">
       <Filter>Header Files</Filter>
     </ClInclude>
