@@ -140,10 +140,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Buscaminas.cpp" />
+</ItemGroup>
+  <ItemGroup>
     <ClCompile Include="Image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Image.h" />
+     </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Table.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Table.h" />
+ </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Resources.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resources.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
