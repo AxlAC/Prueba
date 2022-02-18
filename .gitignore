@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Buscaminas/v16
+/Game/x64/Debug
+
+/x64/Debug/Game.exe
+/x64/Debug/Game.pdb
