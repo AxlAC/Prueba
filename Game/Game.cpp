@@ -3,12 +3,19 @@
 
 #include <iostream>
 #include "SDL.h"
+#include "System.h";
+
 
 int main(int argc, char* args[])
 {
     std::cout << "Hello World!\n";
+    System sys;
+    sys.InitScreen();
+    while(true);
     return 0;
 }
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
