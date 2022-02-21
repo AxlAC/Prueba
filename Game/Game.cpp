@@ -3,30 +3,26 @@
 
 #include <iostream>
 #include "SDL.h"
-#include "System.h";
+#include "System.h"
+#include "Image.h"
 
 
-void Input()
-{
 
-}
-void Update() 
-{
-
-}
-void Draw()
-{
-
-}
 
 int main(int argc, char* args[])
 {
     std::cout << "Hello World!\n";
-    System sys;
-    sys.InitScreen();
+    System *sys = new System;
+    Image img;
+    sys->InitScreen();
+    img.Load(sys->lienzo,"Image.png");
     bool end = false;
     while (!end)
     {
+        sys->Input();
+        sys->Update();
+        sys->RenderTexture(&img, 0, 0);
+        sys->Draw();
 
     }
     return 0;

@@ -27,3 +27,37 @@ void System::InitScreen()
         }
     }
 }
+
+
+void System::Input()
+{
+    const Uint8* keyboard = SDL_GetKeyboardState(NULL);
+    SDL_Event e;
+    while (SDL_PollEvent(&e))
+    {
+
+    }
+
+}
+void System::Update() 
+{
+
+}
+void System::Draw()
+{
+    SDL_SetRenderDrawColor(lienzo,0x00,0x00,0x00,0xFF);
+    SDL_RenderClear(lienzo);
+
+
+    SDL_RenderPresent(lienzo);
+}
+
+void System::RenderTexture(Image *img,int x,int y)
+{
+    SDL_Rect dst;
+    dst.x = x;
+    dst.y = y;
+    dst.w = img->GetWidth();
+    dst.h = img->GetHeight();
+    SDL_RenderCopy(lienzo, img->GetTexture(),NULL, &dst);
+}
