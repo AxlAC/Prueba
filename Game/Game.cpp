@@ -6,14 +6,33 @@
 #include "System.h";
 
 
+void Input()
+{
+
+}
+void Update() 
+{
+
+}
+void Draw()
+{
+
+}
+
 int main(int argc, char* args[])
 {
     std::cout << "Hello World!\n";
     System sys;
     sys.InitScreen();
-    while(true);
+    bool end = false;
+    while (!end)
+    {
+
+    }
     return 0;
 }
+
+
 
 
 
