@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Image.h"
 
+
 class System
 {
 private:

@@ -5,8 +5,7 @@
 #include "SDL.h"
 #include "System.h"
 #include "Image.h"
-
-
+#include "Table.h"
 
 
 int main(int argc, char* args[])
@@ -14,8 +13,10 @@ int main(int argc, char* args[])
     std::cout << "Hello World!\n";
     System *sys = new System;
     Image img;
+    Table tab;
     sys->InitScreen();
     img.Load(sys->lienzo,"Image.png");
+    tab.ReadText("table.txt");
     bool end = false;
     while (!end)
     {
