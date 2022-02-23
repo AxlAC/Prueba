@@ -15,6 +15,7 @@ public:
     void Update();
     void Draw();
     void RenderTexture(Image *img,int x,int y);
+    void RenderClear();
     SDL_Renderer* lienzo;
 };
 

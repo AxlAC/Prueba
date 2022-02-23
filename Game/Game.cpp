@@ -21,6 +21,7 @@ int main(int argc, char* args[])
     {
         sys->Input();
         sys->Update();
+        sys->RenderClear();
         sys->RenderTexture(&img, 0, 0);
         sys->Draw();
 

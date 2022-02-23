@@ -43,12 +43,15 @@ void System::Update()
 {
 
 }
+
+void System::RenderClear()
+{
+    SDL_SetRenderDrawColor(lienzo, 0x00, 0x00, 0x00, 0xFF);
+    SDL_RenderClear(lienzo);
+}
+
 void System::Draw()
 {
-    SDL_SetRenderDrawColor(lienzo,0x00,0x00,0x00,0xFF);
-    SDL_RenderClear(lienzo);
-
-
     SDL_RenderPresent(lienzo);
 }
 
