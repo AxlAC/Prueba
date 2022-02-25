@@ -8,9 +8,10 @@ class System
 {
 private:
     SDL_Window* window;
-    
-
+    System() {};
+    static System* ptr;
 public: 
+    static System* GetPtr();
     void InitScreen();
     void Input();
     void Update();

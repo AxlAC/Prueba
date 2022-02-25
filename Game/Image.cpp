@@ -1,14 +1,15 @@
 #include "Image.h"
-
+#include "System.h"
 SDL_Texture* Image::GetTexture()
 {
 	return image;
 }
 
-void Image::Load(SDL_Renderer* lienzo, const std::string name)
+void Image::Load(const std::string name)
 {
+	System* sys = System::GetPtr();
 	SDL_Surface* loadSurface = IMG_Load(name.c_str());
-	image = SDL_CreateTextureFromSurface(lienzo, loadSurface);
+	image = SDL_CreateTextureFromSurface(sys->GetPtr()->lienzo, loadSurface);
 	SDL_QueryTexture(image, NULL, NULL, &width, &height);
 	SDL_free(loadSurface);
 }
