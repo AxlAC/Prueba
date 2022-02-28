@@ -9,10 +9,11 @@ using namespace std;
 
 class Table
 {
+private:
+	vector <vector<int>> table;
 public:
-
 	Table();
-	void ReadText(const string name);
-
+	void ReadText(const std::string &name);
+	vector<vector<int>> GetTable();
 };
 

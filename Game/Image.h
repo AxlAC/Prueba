@@ -13,7 +13,7 @@ class Image
 		string saveName;
 	public:
 		SDL_Texture *GetTexture();
-		void Load(SDL_Renderer* lienzo, const std::string name);
+		void Load(const std::string name);
 		int GetWidth();
 		int GetHeight();
 		

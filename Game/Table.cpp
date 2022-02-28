@@ -4,11 +4,16 @@ Table::Table()
 {
 }
 
-void Table::ReadText(const string name)
+vector <vector<int>> Table::GetTable()
+{
+	return table;
+}
+
+void Table::ReadText(const std::string &name)
 {
 	ifstream file(name);
 	string line;
-	vector <vector<int>> table;
+	
 
 	while (getline(file, line))
 	{

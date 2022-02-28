@@ -1,5 +1,16 @@
 #include "System.h"
 
+System* System::ptr = nullptr;
+
+System* System::GetPtr()
+{
+    if (ptr == nullptr)
+    {
+        ptr = new System();
+    }
+    return ptr;
+}
+
 void System::InitScreen()
 {
     if (SDL_Init(SDL_INIT_VIDEO) < 0)
