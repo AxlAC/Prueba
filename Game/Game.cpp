@@ -12,12 +12,20 @@ void Game:: Input()
 
 void Game::Draw()
 {
-	auto sys = System::GetPtr();
-	sys->RenderTexture(&background, 0, 0);
+	table.Draw();
 }
 
 void Game::Init()
 {
-	background.Load("Image.png");
-	tab.ReadText("table.txt");
+	table.ReadText("assets/Config/table.txt");
 }
+/*
+IDE
+
+
+compilador
+linker
+editor de texto
+debuger
+*/
+

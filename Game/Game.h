@@ -5,8 +5,7 @@
 class Game
 {
 private:
-    Image background;
-    Table tab;
+    Table table;
 public:
     void Update();
     void Init();
