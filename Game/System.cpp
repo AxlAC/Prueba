@@ -46,7 +46,13 @@ void System::Input()
     SDL_Event e;
     while (SDL_PollEvent(&e))
     {
-
+        //std::cout << "x:" << e.motion.x;;//meter a una variable en systeam
+        //std::cout << "y:" << e.motion.y<<std::endl;//meter a una variable
+        
+        if (e.button.button == 1)//1 es boton izquierdo 
+        {
+            //std::cout << "x:" <
+        }
     }
 
 }

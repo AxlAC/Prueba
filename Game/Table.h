@@ -23,7 +23,6 @@ enum CellState
 	block
 };
 
-
 struct Cell
 {
 	int value;

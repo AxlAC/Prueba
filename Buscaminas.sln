@@ -9,6 +9,8 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		PS5|x64 = PS5|x64
+		PS5|x86 = PS5|x86
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
@@ -17,6 +19,10 @@ Global
 		{70B8A8DD-9A32-4947-9E16-2249B3175179}.Debug|x64.Build.0 = Debug|x64
 		{70B8A8DD-9A32-4947-9E16-2249B3175179}.Debug|x86.ActiveCfg = Debug|Win32
 		{70B8A8DD-9A32-4947-9E16-2249B3175179}.Debug|x86.Build.0 = Debug|Win32
+		{70B8A8DD-9A32-4947-9E16-2249B3175179}.PS5|x64.ActiveCfg = PS5|x64
+		{70B8A8DD-9A32-4947-9E16-2249B3175179}.PS5|x64.Build.0 = PS5|x64
+		{70B8A8DD-9A32-4947-9E16-2249B3175179}.PS5|x86.ActiveCfg = PS5|Win32
+		{70B8A8DD-9A32-4947-9E16-2249B3175179}.PS5|x86.Build.0 = PS5|Win32
 		{70B8A8DD-9A32-4947-9E16-2249B3175179}.Release|x64.ActiveCfg = Release|x64
 		{70B8A8DD-9A32-4947-9E16-2249B3175179}.Release|x64.Build.0 = Release|x64
 		{70B8A8DD-9A32-4947-9E16-2249B3175179}.Release|x86.ActiveCfg = Release|Win32

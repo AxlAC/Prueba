@@ -1,4 +1,7 @@
-#pragma once
+#ifndef GAME_H
+#define GAME_H
+
+
 #include "Image.h"
 #include "Table.h"
 
@@ -13,3 +16,5 @@ public:
     void Input();
 };
 
+
+#endif // GAME_H
