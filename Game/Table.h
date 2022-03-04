@@ -17,10 +17,10 @@ using namespace std;
 
 enum CellState
 {
-	active,
-	bomb=9,
-	flag,
-	block
+	Active,
+	Bomb=9,
+	Flag,
+	Block
 };
 
 struct Cell
@@ -38,6 +38,9 @@ public:
 	Table();
 	void ReadText(const std::string &name);
 	vector<vector<Cell>> GetTable();
+	int GetStatusCell(int mouseX, int mouseY, int &cellX, int &cellY);
+	void SetStatusCell(int cellX, int cellY, int status);
+	int GetValueCell(int cellX, int cellY);
 	void Draw();
 };
 

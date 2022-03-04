@@ -17,7 +17,6 @@ int main(int argc, char* args[])
     game.Init();
     while (!end)
     {
-        sys->Input();
         sys->Update();
         sys->RenderClear();
         game.Input();

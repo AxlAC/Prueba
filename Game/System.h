@@ -13,7 +13,7 @@ private:
 public: 
     static System* GetPtr();
     void InitScreen();
-    void Input();
+    void Input(int& mouseX, int& mouseY, int& mouseButton, int& key);
     void Update();
     void Draw();
     void RenderTexture(Image *img,int x,int y);

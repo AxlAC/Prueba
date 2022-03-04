@@ -9,6 +9,12 @@ class Game
 {
 private:
     Table table;
+    int mouseX; 
+    int mouseY; 
+    int mouseButton;
+    int key;
+    int currentStateCell;
+    int cellX, cellY;
 public:
     void Update();
     void Init();

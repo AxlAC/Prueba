@@ -22,11 +22,11 @@ void Table::ReadText(const std::string &name)
 		vector<Cell> row;
 		for (int i=0; i < line.size(); ++i) 
 		{
-			if(line[i]=='0' || line[i] == '9')
+			if(line[i] =='0' || line[i] == '9')
 			{
 				Cell temp;
 				temp.value = line[i] - '0';
-				temp.status = CellState::active;
+				temp.status = CellState::Active;
 				temp.image.Load("assets/Images/freeCell.png");
 				row.push_back(temp);
 			}
@@ -46,7 +46,7 @@ void Table::Draw()
 	{
 		for (auto cell : row)
 		{
-			if (cell.status == CellState::active)
+			//if (cell.status == CellState::Active)
 			{
 				sys->RenderTexture(&cell.image, offsetX, offsetY);
 			}
@@ -56,3 +56,32 @@ void Table::Draw()
 		offsetY += cellHeight;
 	}
 }
+int Table::GetValueCell(int cellX, int cellY)
+{
+	//validacion examen
+	return table[cellY][cellX].value;
+}
+
+int Table::GetStatusCell(int mouseX, int mouseY, int& cellX, int& cellY)
+{
+	//validacion examen
+	cellX = mouseX/10;
+	cellY = mouseY/10;
+	return table[cellY][cellX].status;
+}
+void Table::SetStatusCell(int cellX, int cellY, int status)
+{
+	//validacion examen posiciones y estados 
+	table[cellY][cellX].status = status;
+	if (status == CellState::Block)
+	{
+		table[cellY][cellX].image.Load("assets/Images/selectedCell.png");
+	}
+}
+
+
+//if (cellX < 0 && cellX > table[0].size())
+//{
+//	cellX = -1;
+//}
+
