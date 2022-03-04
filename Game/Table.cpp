@@ -6,6 +6,7 @@
 
 Table::Table()
 {
+	selected.Load("assets/Images/selectedCell.png");
 }
 
 vector <vector<Cell>> Table::GetTable()
@@ -46,7 +47,12 @@ void Table::Draw()
 	{
 		for (auto cell : row)
 		{
-			//if (cell.status == CellState::Active)
+			if (cell.status == CellState::Final && cell.value == CellState::Bomb)
+			{
+				sys->RenderTexture(&selected, offsetX, offsetY);				
+				sys->RenderTexture(&cell.image, offsetX, offsetY);
+			}
+			else
 			{
 				sys->RenderTexture(&cell.image, offsetX, offsetY);
 			}
@@ -69,6 +75,7 @@ int Table::GetStatusCell(int mouseX, int mouseY, int& cellX, int& cellY)
 	cellY = mouseY/10;
 	return table[cellY][cellX].status;
 }
+
 void Table::SetStatusCell(int cellX, int cellY, int status)
 {
 	//validacion examen posiciones y estados 
@@ -79,9 +86,19 @@ void Table::SetStatusCell(int cellX, int cellY, int status)
 	}
 }
 
+void Table::SetFinalStatus()
+{
+	for (auto row : table)
+	{
+		for (auto cell : row)
+		{
+			cell.status = CellState::Final;
 
-//if (cellX < 0 && cellX > table[0].size())
-//{
-//	cellX = -1;
-//}
+			if (cell.value == CellState::Bomb)
+			{
+				cell.image.Load("assets/Images/Bomb.png");
+			}
+		}
+	}
+}
 

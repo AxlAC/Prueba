@@ -20,7 +20,8 @@ enum CellState
 	Active,
 	Bomb=9,
 	Flag,
-	Block
+	Block,
+	Final
 };
 
 struct Cell
@@ -34,6 +35,7 @@ class Table
 {
 private:
 	vector <vector<Cell>> table;
+	Image selected;
 public:
 	Table();
 	void ReadText(const std::string &name);
@@ -42,5 +44,6 @@ public:
 	void SetStatusCell(int cellX, int cellY, int status);
 	int GetValueCell(int cellX, int cellY);
 	void Draw();
+	void SetFinalStatus();
 };
 

@@ -47,11 +47,9 @@ void System::Input(int &mouseX, int &mouseY, int &mouseButton,int &key)
     mouseButton = 0;
     while (SDL_PollEvent(&e))
     {
-        //std::cout << "x:" << e.motion.x;;//meter a una variable en systeam
-        //std::cout << "y:" << e.motion.y<<std::endl;//meter a una variable
         mouseX = e.motion.x;
         mouseY = e.motion.y;
-        if (e.button.button == 1 && e.button.state == SDL_PRESSED)//1 es boton izquierdo 
+        if (e.button.button == 1 && e.button.state == SDL_PRESSED)
         {
             mouseButton = 1;
         }

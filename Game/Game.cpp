@@ -9,6 +9,7 @@ void Game::Update()
 		if (table.GetValueCell(cellX, cellY) == CellState::Bomb)
 		{
 			//game over
+			table.SetFinalStatus();
 		}
 		else
 		{
