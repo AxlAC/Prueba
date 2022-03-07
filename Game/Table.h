@@ -36,6 +36,7 @@ class Table
 private:
 	vector <vector<Cell>> table;
 	Image selected;
+	bool isFinal = false;
 public:
 	Table();
 	void ReadText(const std::string &name);

@@ -47,15 +47,7 @@ void Table::Draw()
 	{
 		for (auto cell : row)
 		{
-			if (cell.status == CellState::Final && cell.value == CellState::Bomb)
-			{
-				sys->RenderTexture(&selected, offsetX, offsetY);				
-				sys->RenderTexture(&cell.image, offsetX, offsetY);
-			}
-			else
-			{
-				sys->RenderTexture(&cell.image, offsetX, offsetY);
-			}
+			sys->RenderTexture(&cell.image, offsetX, offsetY);
 			offsetX += cellWidth;
 		}
 		offsetX = 0;
@@ -88,17 +80,21 @@ void Table::SetStatusCell(int cellX, int cellY, int status)
 
 void Table::SetFinalStatus()
 {
-	for (auto row : table)
+	if (!isFinal)
 	{
-		for (auto cell : row)
+		for (auto &row : table)
 		{
-			cell.status = CellState::Final;
-
-			if (cell.value == CellState::Bomb)
+			for (auto &cell : row)
 			{
-				cell.image.Load("assets/Images/Bomb.png");
+				cell.status = CellState::Final;
+
+				if (cell.value == CellState::Bomb)
+				{
+					cell.image.Load("assets/Images/Bomb.png");
+				}
 			}
 		}
+		isFinal = true;
 	}
 }
 
