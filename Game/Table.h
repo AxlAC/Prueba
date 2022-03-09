@@ -45,6 +45,7 @@ public:
 	void SetStatusCell(int cellX, int cellY, int status);
 	int GetValueCell(int cellX, int cellY);
 	void Draw();
-	void SetFinalStatus();
+	void SetFinalStatus(); 
+	int CheckCell(int cellX, int cellY);
 };
 
