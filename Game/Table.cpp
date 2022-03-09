@@ -72,9 +72,37 @@ void Table::SetStatusCell(int cellX, int cellY, int status)
 {
 	//validacion examen posiciones y estados 
 	table[cellY][cellX].status = status;
-	if (status == CellState::Block)
+	switch (status)
 	{
-		table[cellY][cellX].image.Load("assets/Images/selectedCell.png");
+		case CellState::Block:
+			table[cellY][cellX].image.Load("assets/Images/selectedCell.png");
+		break;
+		case 1:
+			table[cellY][cellX].image.Load("assets/Images/1.png");
+		break;
+		case 2:
+			table[cellY][cellX].image.Load("assets/Images/2.png");
+		break;
+		case 3:
+			table[cellY][cellX].image.Load("assets/Images/3.png");
+			break;
+		case 4:
+			table[cellY][cellX].image.Load("assets/Images/4.png");
+			break;
+		case 5:
+			table[cellY][cellX].image.Load("assets/Images/5.png");
+			break;
+		case 6:
+			table[cellY][cellX].image.Load("assets/Images/6.png");
+			break;
+		case 7:
+			table[cellY][cellX].image.Load("assets/Images/7.png");
+			break;
+		case 8:
+			table[cellY][cellX].image.Load("assets/Images/8.png");
+		break;
+		default:
+			table[cellY][cellX].image.Load("assets/Images/selectedCell.png");
 	}
 }
 

@@ -6,10 +6,15 @@ void Game::Update()
 {
 	if (currentStateCell == CellState::Active)
 	{
+		int bombsNumber = table.CheckCell(cellX, cellY);
 		if (table.GetValueCell(cellX, cellY) == CellState::Bomb)
 		{
 			//game over
 			table.SetFinalStatus();
+		}
+		else if (bombsNumber > 0 && bombsNumber < 9)
+		{
+			table.SetStatusCell(cellX, cellY, bombsNumber);
 		}
 		else
 		{
@@ -30,7 +35,6 @@ void Game:: Input()
 	if(mouseButton==1)
 	{
 		currentStateCell = table.GetStatusCell(mouseX,mouseY, cellX, cellY);
-		cout << table.CheckCell(cellX, cellY) << endl;
 	}
 
 }
@@ -42,7 +46,7 @@ void Game::Draw()
 
 void Game::Init()
 {
-	table.ReadText("assets/Config/table.txt");
+	table.Init("assets/Config/table.txt");
 	currentStateCell = -1;
 }
 /*
