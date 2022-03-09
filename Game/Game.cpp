@@ -30,6 +30,7 @@ void Game:: Input()
 	if(mouseButton==1)
 	{
 		currentStateCell = table.GetStatusCell(mouseX,mouseY, cellX, cellY);
+		cout << table.CheckCell(cellX, cellY) << endl;
 	}
 
 }

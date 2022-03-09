@@ -98,3 +98,35 @@ void Table::SetFinalStatus()
 	}
 }
 
+int Table::CheckCell(int cellX, int cellY)
+{
+	int contador = 0;
+	int arrY = cellY - 1, abaY = cellY + 1;
+	int izqX = cellX - 1, derX = cellX + 1;
+	if (arrY < 0)
+	{
+		arrY = cellY;
+	}
+	else if (abaY > table.size()-1)
+	{
+		abaY = cellY;
+	}
+	if (izqX < 0)
+	{
+		izqX = cellX;
+	}
+	else if (derX > table[0].size()-1)
+	{
+		derX = cellX;
+	}
+1;	for (int y = arrY; y <= abaY; y++)
+	{
+		for (int x = izqX; x <= derX; x++)
+		{
+			if (table[y][x].value == CellState::Bomb)
+				contador++;
+		}
+	}
+	return contador;
+}
+
